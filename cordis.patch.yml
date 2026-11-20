@@ -1,0 +1,9 @@
+# dsh-chat-migrate bundle patch layer.
+#
+# 一行 Host 插件：注册 /chat-migrate/api 路由，供面板（client.js）同源调用。
+# disabled 守卫：如果这个包已经被别的层挂过，就不再重复挂，避免路由注册两次（webServer 对重复路由会抛错）。
+- insert:
+    - id: dsh-chat-migrate
+      name: 'dsh-chat-migrate'
+      config: {}
+      disabled: !!js "[...ctx.loader.entries()].some((e) => e.options.name === 'dsh-chat-migrate' && e.options.id !== 'dsh-chat-migrate' && !e.disabled)"
