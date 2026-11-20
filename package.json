@@ -1,0 +1,59 @@
+{
+  "name": "dsh-chat-migrate",
+  "version": "1.1.1",
+  "description": "网页会话迁移：左侧栏入口，登录网页端账号、导出会话、下载归档、按条件筛选，并把选中的会话写成真正的 DSH 会话或落地成 Markdown + JSON 文件。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "INSTALL.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek",
+    "chat-history",
+    "migration",
+    "export",
+    "import",
+    "session"
+  ],
+  "license": "MIT",
+  "author": "kxx-python <kxx-python@users.noreply.github.com>",
+  "homepage": "https://github.com/kxx-python/dsh-chat-migrate#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kxx-python/dsh-chat-migrate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kxx-python/dsh-chat-migrate/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}
