@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Web chat migration",
+    "description": "Adds a sidebar panel that moves chat.deepseek.com history into the desktop app: Capture from browser hands a one-line console snippet that posts the signed-in web token back to the local panel (pasting a token still works), then pull the conversation list, export a JSON archive, download it, filter by keyword, date, message count and import state, and import the selected conversations into the workspace or a chosen folder as one Markdown transcript plus one JSON file each. Import produces files, not new sidebar sessions, and DSH session logs are never rewritten. The token stays in host memory and is lost on restart.",
+    "detail": "docs/DETAIL.md"
+  }
+}
