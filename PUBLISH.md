@@ -7,7 +7,7 @@
 | npm | `dsh-chat-migrate@1.1.1` 已发布，`latest` 指向它；tarball 13 个文件 / 128 KB 解包，含 `dsh.bundle` |
 | npm 占位版本 | 首次发布时 npm 自动建了 `0.0.0-stage`（stub，占位用）；bypass-2FA 的 granular token 没有删除权限，可在 npm 网页上手动删 |
 | GitHub 仓库 | <https://github.com/kxx-python/dsh-chat-migrate>（public，topics：`dsh-plugin` `deepseek-harness` `chat-history` `session-migration`） |
-| 目录 PR | fork 分支 `add-dsh-chat-migrate` 已提交 `data/plugins/kxx-python__dsh-chat-migrate.yml`，**等仓库满 1 天**（2026-11-21T06:26Z，香港时间 14:26）再开 PR |
+| 目录 PR | **已提交**：<https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/17993>（2026-11-23，改动只有 `data/plugins/kxx-python__dsh-chat-migrate.yml`，+6 行） |
 | CDN | unpkg 全量可读（`https://unpkg.com/dsh-chat-migrate@1.1.1/package.json` 200）；jsDelivr 边沿还在回源，必要时用 `https://purge.jsdelivr.net/npm/dsh-chat-migrate@1.1.1/` 再推一次 |
 
 这个包现在的形态已经可以直接发布：`npm pack --dry-run` 打出来 12 个文件、36.7 kB，
